@@ -1,13 +1,14 @@
-let n = 1
+function task1_1(n) {
 
-if (n > 0) {
-    console.log("Положительное число");
-} else if (n < 0) {
-    console.log("Отрицательное число");
-} else {
-    console.log("Ноль");
+    if (n > 0) {
+        console.log("Положительное число");
+    } else if (n < 0) {
+        console.log("Отрицательное число");
+    } else {
+        console.log("Ноль");
+    }
 }
-
+task1_1(10)
 // Вывел сразу длинну и последний символ
 let str = "Hello world";
 
