@@ -34,9 +34,14 @@ if (word[0] == word_1[0]){
     }
 
 
-let word_2 = prompt("напишите слово");
-if(word_2.slice(-1) === "ь")  {
-    console.log(word_2.slice(-2, -1));
-} else if(word_2.slice(-1) != "ь") {
-    console.log(word_2.slice(-1));
-}
+    function getLast(word_2) {
+    if (word_2.endsWith('ь')) {
+      return word_2[word_2.length - 2];
+    } else {
+      return word_2[word_2.length - 1];
+    }
+    }
+    let word_2 = prompt("Введите слово");
+    let lastLet = getLast(word_2)
+
+    console.log(word_2, lastLet);
