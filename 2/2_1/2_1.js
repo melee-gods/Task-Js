@@ -43,15 +43,15 @@ function removeElements(array, value) {
   console.log(updatArray);
 
 // 4
-function sumFirstHalf(array) {
-    let half = Math.ceil(array.length / 2);
+function sumFirstHalf(arr) {
+    let half = Math.ceil(arr.length / 2);
     let sum = 0;
     for (let i = 0; i < half; i++) {
-      sum += array[i];
+      sum += arr[i];
     }
     return sum;
   }
 
-  let array = [1, 2, 3, 4, 5, 6];
-  let sum = sumFirstHalf(array);
+  let arr = [1, 2, 3, 4, 5, 6];
+  let sum = sumFirstHalf(arr);
   console.log(sum);
