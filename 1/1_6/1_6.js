@@ -13,7 +13,7 @@ function task_1_6_1(numbers) {
 console.log(task_1_6_1(numbers));
 
 
-let numbers_1 = ['0', '1', '2', '3', '4', '5'];
+let numbers_1 = [0, 1, 2, 3, 4, 5, -9];
 // Дан массив с числами. Найдите сумму квадратных корней элементов этого массива.
 function task_1_6_2(numbers) {
     let sums = 0;
