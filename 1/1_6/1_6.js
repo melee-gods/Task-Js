@@ -13,12 +13,12 @@ function task_1_6_1(numbers) {
 console.log(task_1_6_1(numbers));
 
 
-let numbers_1 = [0, 1, 2, 3, 4, 5, -9];
+let numbers_1 = ['0', '1', '2', '3', '4', '5'].map(Number);
 // Дан массив с числами. Найдите сумму квадратных корней элементов этого массива.
-function task_1_6_2(numbers) {
+function task_1_6_2(numbers_1) {
     let sums = 0;
-    for (let a = 0; a < numbers.length; a++) {
-      sums += Math.sqrt(Number(numbers[a]));
+    for (let a = 0; a < numbers_1.length; a++) {
+      sums += Math.sqrt(Number(numbers_1[a]));
     }
     return sums;
 }
