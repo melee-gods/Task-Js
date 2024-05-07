@@ -1,6 +1,10 @@
-let str = prompt('Введите слово');
+let str = prompt("Введите строку:");
 
-console.log(str.slice(-1));
+if (str.length > 1) {
+console.log(str.charAt(str.length - 2));
+} else {
+console.log(null);
+}
 
 
 let a = prompt("Введите число a");
