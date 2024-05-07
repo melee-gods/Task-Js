@@ -1,6 +1,6 @@
 'use strict';
 // Дана некоторая строка. Найдите позицию первого нуля в строке.
-function FirstZero() {
+function firstZero() {
 let str = prompt("Введите строку:");
 if (str === null) {
     return null; // нажал отмену
@@ -12,7 +12,7 @@ if (position === -1) {
   console.log("Позиция первого нуля: " + position);
 }
 }
-let result = FirstZero();
+let result = firstZero();
 console.log(result);
 
 
