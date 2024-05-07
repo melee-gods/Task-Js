@@ -36,7 +36,7 @@ function task_1_7_4(b) {
     let sum = 0;
     let s = String(b).split('').map(Number);
     for (let h = 0; h < s.length; h++) {
-      sum += s[i];
+      sum += s[h];
     }
     return sum;
   }
