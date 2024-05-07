@@ -22,8 +22,8 @@ function SumFive() {
       let num = i.toString();
       if (num.length > 1) {
         let first = parseInt(num[0], 10);
-        let last = parseInt(num[1], 10);
-        if (first + last === 5) {
+        let second = parseInt(num[1], 10);
+        if (first + second === 5) {
             console.log(i);
         }
       }
