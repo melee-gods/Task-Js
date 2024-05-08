@@ -20,7 +20,7 @@ task_1_7_2(n);
 
 
 // Дано некоторое число: 12345 Переверните его: 54321
-function task_1_7_3(int){
+function task_1_7_3(int){ //попробовать решить через .reduce
     let num ="";
     for(let i= 0; i<int.length; i++){
     num = int[i]+num ;

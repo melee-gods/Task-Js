@@ -13,17 +13,19 @@ function task_1_6_1(numbers) {
 console.log(task_1_6_1(numbers));
 
 
-let numbers_1 = ['0', '1', '2', '3', '4', '5'].map(Number);
+let numbers_1 = [0, 1, 2, 3, 4, 5, -9]; 
 // Дан массив с числами. Найдите сумму квадратных корней элементов этого массива.
 function task_1_6_2(numbers_1) {
-    let sums = 0;
-    for (let a = 0; a < numbers_1.length; a++) {
-      sums += Math.sqrt(Number(numbers_1[a]));
+    let sum = 0;
+    for (let a = 0; a < numbers.length; a++) {
+        if (numbers_1[a] >= 0) {
+            sum += Math.sqrt(numbers_1[a]);
+        }
     }
-    return sums;
+    return sum;
 }
-console.log(task_1_6_2(numbers_1));
 
+console.log(task_1_6_2(numbers_1));
 
 let arr = [2, 5, 9, 15, 0, 4, -9];
 // Дан массив с числами. Найдите сумму положительных элементов этого массива.
