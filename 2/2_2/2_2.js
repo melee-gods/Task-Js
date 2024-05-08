@@ -20,3 +20,28 @@ console.log(pos);
 
 
 // Дана строка. Удалите предпоследний символ из этой строки.
+function task_2_2_3() {
+    let str = prompt("Введите строку:");
+    if (str === null) {
+      console.log("Отменено");
+    } else {
+      let newStr = str.slice(0, -2) + str.slice(-1);
+      console.log(newStr);
+    }
+}
+console.log(task_2_2_3());
+
+
+let array = [1, 2, 3, 4, 5, 6];
+// Дан некоторый массив, например, вот такой: [1, 2, 3, 4, 5, 6] Поделите сумму первой половины элементов этого массива на сумму второй половины элементов.
+function task_2_2_4(array) {
+    let half = Math.floor(array.length / 2);
+    let first = array.slice(0, half).reduce((acc, val) => acc + val, 0);
+    let second = array.slice(half).reduce((acc, val) => acc + val, 0);
+  
+    if (second === 0) {
+      throw new Error('Сумма второй половины равна нулю, деление невозможно.');
+    }
+    return first / second;
+}
+console.log(task_2_2_4(array));
