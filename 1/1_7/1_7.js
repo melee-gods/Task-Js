@@ -20,14 +20,24 @@ task_1_7_2(n);
 
 
 // Дано некоторое число: 12345 Переверните его: 54321
-function task_1_7_3(int){ //попробовать решить через .reduce
+function task_1_7_3_1(int){ //попробовать решить через .reduce
     let num ="";
     for(let i= 0; i<int.length; i++){
     num = int[i]+num ;
 }
     return num ;
 }
-console.log(task_1_7_3("12345"));
+console.log(task_1_7_3_1("12345"));
+
+// 2 решение через .reduce
+function task_1_7_3_2(input) {
+  return input.split('')
+    .reduce((acc, value) => {
+      return value + acc;
+    }, ''); // Начальное значение - пустая строка
+}
+
+console.log(task_1_7_3_2("12345"));
 
 
 let b = 12345;
