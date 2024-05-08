@@ -44,7 +44,7 @@ let updatArray = task_2_1_3(origArray, valueRemove);
 console.log(updatArray);
 
 
-let arr = [1, 2, 3, 4, 5, 6];
+let arr = [1, 2, 3, 4, 5, 6, 7];
 // Дан некоторый массив, например, вот такой: [1, 2, 3, 4, 5, 6] Найдите сумму первой половины элементов этого массива.
 function task_2_1_4(arr) {
     let half = Math.ceil(arr.length / 2);
