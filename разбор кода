@@ -1,0 +1,27 @@
+function sumOfFirstHalf(target, resolver) {
+  const centerIndex = Math.floor(target.length / 2)
+  const leftPartSum = target.slice(0, centerIndex).reduce((acc, el) => acc + el, 0)
+  if(target.length % 2 === 0) {
+    return leftPartSum;
+  }
+
+  if(resolver === undefined || resolver === null) {
+    throw Error(`Непредвиденная ошибка: параметр resolver не найден, но target имеет не четную длину. 
+    Передайте resolver чтобы решить что делать с "лишним" элеменом`)
+  }
+
+  let incompatible = resolver?.(target[centerIndex])
+  if(incompatible !== undefined && incompatible !== null) {
+    return leftPartSum + incompatible;
+  }
+
+#Сначала вычисляется индекс, который поделит массив на две части, используя Math.floor(target.length / 2)
+
+#Затем суммирует элементы первой половины массива с помощью  .reduce
+
+#Если длина массива четная (target.length % 2 === 0), возвращает сумму первой половины, тк в этом случае лишнего элемента нет
+
+#Если параметр resolver не определен или равен null, функция выдает ошибку. 
+#Если resolver определен, функция вызывает его, передавая лишний элемент (target[centerIndex]). значение resolver добавляется к сумме первой половины.
+
+#Функция возвращает сумму первой половины, возможно увеличенную на значение, возвращенное resolver.
