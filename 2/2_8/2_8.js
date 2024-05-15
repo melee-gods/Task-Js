@@ -4,19 +4,25 @@
 function task_2_8_1() {
     let str = prompt('Введите строку:');
     if (str === null) {
-      return null;
+      console.log('Ввод отменён!');
+      return;
     }
   
     let a = 0;
-    for (let i = 0; i < str.length; i++) {
-      let char = str[i];
-      if (char === char.toUpperCase() && char !== char.toLowerCase()) {
-        a++;
-      }
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (char === char.toUpperCase() && char !== char.toLowerCase()) {
+      a++;
     }
-    return a <= 2;
   }
-  console.log(task_2_8_1()); // выведет true, если заглавных букв не более двух, иначе false
+  
+  if (a <= 2) {
+    console.log('В строке не более двух заглавных букв');
+  } else {
+    console.log('В строке более двух заглавных букв');
+  }
+  }
+  console.log(task_2_8_1()); 
 
 
 let string = '1 22 333 4444 22 5555 1';

@@ -23,12 +23,32 @@ function task_2_6_2(arr) {
 
 
 //   Дана некоторая строка с числом: '1234567' Отделите тройки цифр пробелами, начиная с конца числа. В нашем случае должно получится следующее: '1 234 567'
-function task_2_6_3(str_1) {
+function task_2_6_3_1(str_1) {
     str_1 = str_1.replace(/\s/g, '');
     return str_1.split('').reverse().join('').replace(/(\d{3})/g, '\$1 ').trim().split('').reverse().join('');
   }
 let numberStr_1 = '1234567';
-  console.log(task_2_6_3(numberStr_1)); 
+  console.log(task_2_6_3_1(numberStr_1));
+
+  // 2 решение(но как убрать пробелы без регуляки?)
+  function task_2_6_3_2(str_1) {
+    str_1 = str_1.replace(/\s/g, '');
+  
+    let r = '';
+    let c = 0;
+  
+    for (let i = str_1.length - 1; i >= 0; i--) {
+      r = str_1[i] + r;
+
+      if (c % 3 === 2 && i !== 0) { 
+        r = ' ' + r; 
+      }
+      c++;
+    }
+  
+    return r;
+  }
+  console.log(task_2_6_3_2(numberStr_1));
 
 // Дана некоторая строка: 'AbCdE' Смените регистр букв этой строки на противоположный. В нашем случае должно получится следующее: 'aBcDe'
 function task_2_6_4(str_2) {
@@ -55,15 +75,12 @@ function task_2_6_5(array) {
 
 // Дана некоторая строка со словами: 'aaa bbb ccc eee fff' Сделайте заглавным первый символ каждого второго слова в этой строке. В нашем случае должно получится следующее:'aaa Bbb ccc Eee fff'
 function task_2_6_6(str_3) {
-    return str_3
-      .split(' ')
-      .map((word, indexs) => {
+    return str_3.split(' ').map((word, indexs) => {
         if (indexs % 2 !== 0) {
           return word.charAt(0).toUpperCase() + word.slice(1);
         }
         return word;
-      })
-      .join(' ');
+      }).join(' ');
   }
   let inputString = 'aaa bbb ccc eee fff';
   console.log(task_2_6_6(inputString)); // Выведет 'aaa Bbb ccc Eee fff'
