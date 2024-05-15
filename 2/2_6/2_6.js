@@ -30,9 +30,14 @@ function task_2_6_3_1(str_1) {
 let numberStr_1 = '1234567';
   console.log(task_2_6_3_1(numberStr_1));
 
-  // 2 решение(но как убрать пробелы без регуляки?)
+  // 2 решение
   function task_2_6_3_2(str_1) {
-    str_1 = str_1.replace(/\s/g, '');
+    let space = '';
+    for (let i = 0; i < str_1.length; i++) {
+      if (str_1[i] !== ' ') {
+          space += str_1[i];
+      }
+  }
   
     let r = '';
     let c = 0;
